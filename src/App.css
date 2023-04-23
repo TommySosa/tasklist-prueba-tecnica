@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+.contenedorPrincipal {
+  width: 100%;
+  height: calc(100vh-100px);
+  color: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+h1{
+  font-size: 3em;
+  font-weight: 600;
+}
+.contenedorFormulario{
+  width: 50%;
+  background-color: rgb(10, 172, 194);
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contenedorTareas{
+  width: 50%;
+  background-color: rgb(10, 172, 194);
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+input {
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+input:focus {
+  outline: none;
+  border-color: #6ea1ff;
+  box-shadow: 1px 1px 3px rgba(110, 161, 255, 0.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn{
+  background-color: rgb(5, 81, 91);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(6, 127, 143);
+  transform: scale(1.1);
+}
+
+.contenedorInfoTareas{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contenedorTarea{
+  width: 80%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1.3em;
+  
+  background-color: rgb(5, 81, 91);
+  border-radius: 15px;
+  box-shadow: 5px 5px rgba(255,255,255,0.3);
+}
+.todoTarea{
+  margin-right: 50px;
+}
+.spanSubrayado{
+  text-decoration: line-through;
+  color:red;
+}
+.iconos{
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .contenedorFormulario {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+  .contenedorTareas{
+    width: 80%;
+  }
+  .contenedorTarea{
+    width: 100%;
   }
 }
